@@ -16,7 +16,7 @@ COMMAND_COLOR = Fore.GREEN + Style.BRIGHT
 FILLED_BAR_COLOR = Fore.GREEN + Style.BRIGHT    
 UNFILLED_BAR_COLOR = Fore.RED + Style.DIM       
 FILE_COLOR = Fore.GREEN + Style.BRIGHT           
-THEME_COLOR = Fore.BLACK + Style.BRIGHT    
+THEME_COLOR = Fore.YELLOW + Style.BRIGHT    
 
 class CliWrap:
     def __init__(self):
@@ -185,14 +185,12 @@ ________________________________________________________________________________
 
 """.strip()
     cli_wrap.output.append(top_commands_title)
-    cli_wrap.output.append("\n")
 
     for i, (item, perc) in enumerate(command_percentages):
             i += 1
             bar = cli_wrap.create_scaled_bar(perc)
             padded_item = cli_wrap.pad_text(f"{i}. {item}", FILE_COLOR, 30)
             cli_wrap.output.append(f"{padded_item:>50} | {bar} | {perc:5.1f}%") 
-    cli_wrap.output.append("\n")
 
     top_files_title = """
 __________________________________________________________________________________________
@@ -207,7 +205,6 @@ ________________________________________________________________________________
 ------------------------------------------------------------------------------------------
 """.strip()
     cli_wrap.output.append(top_files_title)
-    cli_wrap.output.append("\n")
 
     for i, (item, perc) in enumerate(file_percentages):
             i += 1

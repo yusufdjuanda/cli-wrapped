@@ -34,3 +34,6 @@ python cli_wrapped.py
 ## Note
 If you are not using Bash, change the `.bash_history` to other shell history file.
 
+---
+## Output
+![alt text](image.png)
